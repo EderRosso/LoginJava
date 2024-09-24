@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.DAO;
 
 import java.sql.*;
@@ -18,16 +14,16 @@ public class ConexaoDAO {
         
         String driver = "com.mysql.jdbc.Driver";
         
-        String url = "jdbc:mysql://localhost:3306/bancoteste";
+        String url = "jdbc:mysql://localhost:3306/bdaulaeder";
         String user = "root";
-        String password = "root";
+        String password = "sofia15042015";
         
         try {
             Class.forName(driver);
             conexao = DriverManager.getConnection(url, user, password);
             return conexao;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Conexão" + e);
+            JOptionPane.showMessageDialog(null,"Conexão" + e);;
             return null;
         }
     }
